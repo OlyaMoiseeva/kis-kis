@@ -1,0 +1,18 @@
+$primary-color: #FF7236;
+$primary-color-hov: #F05B1B;
+$hov-color: #FAC663;
+$text-color: #1A212F;
+$line-color: #E1E1E1;
+$head: #FFFDFB;
+
+$font-main: "Lato";
+$font-main-500: "Lato Medium";
+$font-main-600: "Lato Semibold";
+$font-sec-500: "Rubik Medium";
+$font-sec-700: "Rubik Bold";
+
+@mixin flex-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
