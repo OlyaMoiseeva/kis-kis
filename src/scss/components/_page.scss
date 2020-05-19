@@ -102,7 +102,7 @@
   border: 1px solid $line-color;
   transition: all 0.1s ease-in-out;
   &:focus {
-    border: 1px solid $primary-color-hov;
+    border: 1px solid $hov-color;
   }
 }
 .filters__price-text {
@@ -213,7 +213,7 @@
   width: calc(100% - 310px);
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: auto;
+  grid-template-rows: max-content;
   grid-gap: 30px;
 }
 .card {
@@ -273,10 +273,14 @@
   &:before {
     content: "";
     position: absolute;
-    width: 42px;
-    height: 42px;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
     background: url(../images/paw.svg);
-    right: 2px;
+    right: 6px;
     top: 5px;
+  }
+  &:hover:before {
+    box-shadow: 0 2px 5px -1px $text-color;
   }
 }

@@ -154,25 +154,24 @@ document.addEventListener('DOMContentLoaded', function() {
     const sqrInpAll = [...document.querySelectorAll('.checkbox__inp--sqr')];
     const eqpInpChecked = [...document.querySelectorAll('.checkbox__inp--eqp:checked')];
     const eqpInpAll = [...document.querySelectorAll('.checkbox__inp--eqp')];
-    const sqr = [];
-    const eqp = [];
 
-    for (let i of sqrInpChecked) {
-      sqr.push(i.getAttribute('data-value'));
-    }
-    if (sqr.length === 0) {
-      for (let i of sqrInpAll) {
-        sqr.push(i.getAttribute('data-value'));
+    function makeFltrArr (arrChecked, arrAll) {
+      const result = [];
+
+      for (let i of arrChecked) {
+        result.push(i.getAttribute('data-value'));
       }
-    }
-    for (let i of eqpInpChecked) {
-      eqp.push(i.getAttribute('data-value'));
-    }
-    if (eqp.length === 0) {
-      for (let i of eqpInpAll) {
-        eqp.push(i.getAttribute('data-value'));
+      if (result.length === 0) {
+        for (let i of arrAll) {
+          result.push(i.getAttribute('data-value'));
+        }
       }
+
+      return result;
     }
+
+    const eqp = makeFltrArr(eqpInpChecked, eqpInpAll);
+    const sqr = makeFltrArr(sqrInpChecked, sqrInpAll);
     
     newArr = cards
       .filter((item) => {
