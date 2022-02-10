@@ -6,7 +6,7 @@
   "devDependencies": {
     "gulp-autoprefixer": "^7.0.1",
     "gulp-sass": "^4.0.2",
-    "node-sass": "^4.13.0",
+    "node-sass": "^7.0.0",
     "@babel/core": "^7.9.6",
     "@babel/preset-env": "^7.9.6",
     "del": "^5.1.0",
